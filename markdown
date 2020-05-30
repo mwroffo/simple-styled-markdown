@@ -6,6 +6,7 @@ out="$out.html"
 touch $out
 echo $in $out
 
+### superfluous; unfinished attempt to use pure bash for better speed.
 a='<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
 <style>
@@ -27,5 +28,6 @@ a='<meta name="viewport" content="width=device-width, initial-scale=1">
 b=$(/usr/local/bin/markdown <$in)
 c="$a$b<article/>"
 echo $c >$out
+### superfluous
 
 node /Users/_mexus/bin/markdown.js <$in >$out
